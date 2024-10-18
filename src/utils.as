@@ -10,3 +10,12 @@ CGameEditorPluginMapMapType@ GetMapPlugin() {
   }
   return cast<CGameEditorPluginMapMapType>(editor.PluginMapType);
 }
+
+CGameCtnChallenge@ GetChallenge() {
+  CGameCtnEditorFree@ editor = GetMapEditor();
+  if (editor is null) {
+    print("Editor is null");
+    return null;
+  }
+  return editor.Challenge;
+}
